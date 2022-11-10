@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{%block title%}
+LOGIN
+{%endblock title%}
+
+{% block content %}
+<h1 id="login-header">Login to the website</h1>
+<div class="form-group">
+    <form action="" method="post">
+        {{ form|crispy }}
+        {% csrf_token %}
+        <input type="submit" value="Login" class="btn btn-primary">
+    </form>
+</div>
+<style>
+.form-group {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+
+#login-header {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: monospace;
+}
+</style>
+{% endblock content %}

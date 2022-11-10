@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{%block title%}
+LOGIN
+{%endblock title%}
+
+{% block content %}
+<h1 id="login-header">Login to the website</h1>
+<div class="to-cen">
+    <h2>Thanks for registering {{ user.first_name }}</h2>
+</div>
+<style>
+.to-cen {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+
+#login-header {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: monospace;
+}
+</style>
+{% endblock content %}
